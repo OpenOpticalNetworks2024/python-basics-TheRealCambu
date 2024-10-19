@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/6_Kpb2c7)
 These exercise sets cover some aspects you will find useful for the final exam software development. These exercises are NOT part of the final exam and their goal is to make you get used to Python programming. All the sets are provided with solutions. However, you are strongly encouraged to find yourself a solution to the presented problems.
 
 # Exercise Set 1 - Python basics
