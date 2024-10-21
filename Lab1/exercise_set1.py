@@ -2,6 +2,7 @@
 
 import numpy as np
 import matplotlib as plt
+import time
 
 
 # Please, remove all the pass in the exercises and substitute them with the expected methods for your functions
@@ -160,17 +161,56 @@ def exercise8(str1, str2):
 
 # ex9
 def exercise9(str1):
-    if not (isinstance(str1, str) or isinstance(str2, str)):
-        raise Exception("One or both inputs are not strings!")
+    if not isinstance(str1, str):
+        raise Exception("The inserted input is not a string!")
 
-    len_str1 = len(str1)
-    if not (len_str1 > 0 and len(str2) > 0):
-        raise Exception("One or both strings are empty!")
+    if len(str1) == 0:
+        raise Exception("The inserted string is empty!")
 
+    uc_letters = sum(1 for c in str1 if c.isupper())
+    lc_letters = sum(1 for c in str1 if c.islower())
+    digit_letters = sum(1 for c in str1 if c.isdigit())
+    special_letters = sum(1 for c in str1 if not c.isalnum())
+
+    print(f"Number of uppercase letters: {uc_letters}")
+    print(f"Number of lowercase letters: {lc_letters}")
+    print(f"Number of digits: {digit_letters}")
+    print(f"Number of special symbols: {special_letters}")
 
 # ex10
-def exercise10():
-    pass
+def exercise10_1(str1):
+    if not isinstance(str1, str):
+        raise Exception("The inserted input is not a string!")
+
+    if not len(str1) > 2:
+        raise Exception("The inserted string is shorter than 3 letters. No occcurrency fir USA!")
+
+    str1_lc = str1.lower()
+    word_to_find = "usa"
+    occ_counter = 0
+    len_word_to_find = len(word_to_find)
+    for idx in range(len(str1_lc) - len_word_to_find + 1):
+        if word_to_find in str1_lc[idx:idx + len_word_to_find]:
+            occ_counter += 1
+
+    print(f"\"{word_to_find}\" is {occ_counter} in \"{str1}\"")
+
+    return occ_counter
+
+def exercise10_2(str1):
+    if not isinstance(str1, str):
+        raise Exception("The inserted input is not a string!")
+
+    if len(str1) < 3:
+        raise Exception("The inserted string is shorter than 3 letters. No occurrences for USA!")
+
+    str1_lc = str1.lower()
+    word_to_find = "usa"
+    occ_counter = str1_lc.count(word_to_find)
+
+    print(f"\"{word_to_find}\" occurs {occ_counter} times in \"{str1}\"")
+
+    return occ_counter
 
 
 # ex11
@@ -209,11 +249,22 @@ if __name__ == "__main__":
     # print("EX8")
     # final_string = exercise8("hello", "world")
 
-    print("EX9")
-    exercise9()
+    # print("EX9")
+    # exercise9("HelloWorld123!@#")
 
     print("EX10")
-    exercise10()
+    start_time = time.time()
+    exercise10_1("usa is 3 times in usa")
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print(f"Execution time: {elapsed_time:.6f} seconds for the first function.")
+
+    print("EX10")
+    start_time = time.time()
+    exercise10_2("usa is 3 times in usa")
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print(f"Execution time: {elapsed_time:.6f} seconds for the first function.")
 
     print("EX11")
     exercise11()
