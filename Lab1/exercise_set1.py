@@ -177,6 +177,7 @@ def exercise9(str1):
     print(f"Number of digits: {digit_letters}")
     print(f"Number of special symbols: {special_letters}")
 
+
 # ex10
 def exercise10_1(str1):
     if not isinstance(str1, str):
@@ -197,6 +198,7 @@ def exercise10_1(str1):
 
     return occ_counter
 
+
 def exercise10_2(str1):
     if not isinstance(str1, str):
         raise Exception("The inserted input is not a string!")
@@ -214,13 +216,32 @@ def exercise10_2(str1):
 
 
 # ex11
-def exercise11():
-    pass
+def exercise11(str1):
+    if not isinstance(str1, str):
+        raise Exception("The inserted input is not a string!")
+
+    if len(str1) == 0:
+        raise Exception("The inserted string is empty!")
+
+    sum_digits = sum(ord(c) - ord('0') for c in str1 if c.isdigit())
+    print(f"The sum of the digits in the string \"{str1}\" is {sum_digits}")
+
+    return sum_digits
 
 
 # ex12
-def exercise12():
-    pass
+def exercise12_1(str1):
+    if not isinstance(str1, str):
+        raise Exception("The inserted input is not a string!")
+
+    if len(str1) == 0:
+        raise Exception("The inserted string is empty!")
+
+    count_occ = {unique_char: str1.count(unique_char) for unique_char in set(str1)}
+
+    print(f"Unique occurrencies of all characters within the string\n\"{str1}\"\nare: {count_occ}")
+
+    return count_occ
 
 
 if __name__ == "__main__":
@@ -252,22 +273,14 @@ if __name__ == "__main__":
     # print("EX9")
     # exercise9("HelloWorld123!@#")
 
-    print("EX10")
-    start_time = time.time()
-    exercise10_1("usa is 3 times in usa")
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-    print(f"Execution time: {elapsed_time:.6f} seconds for the first function.")
+    # print("EX10")
+    # exercise10_1("usa is 3 times in usa")
+    #
+    # print("EX10")
+    # exercise10_2("usa is 3 times in usa")
 
-    print("EX10")
-    start_time = time.time()
-    exercise10_2("usa is 3 times in usa")
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-    print(f"Execution time: {elapsed_time:.6f} seconds for the first function.")
-
-    print("EX11")
-    exercise11()
+    # print("EX11")
+    # sum_of_the_digits = exercise11("33 trentini entrarono a trento tutti e 33 trotterellando")
 
     print("EX12")
-    exercise12()
+    exercise12_1("33 trentini entrarono a trento tutti e 33 trotterellando")
