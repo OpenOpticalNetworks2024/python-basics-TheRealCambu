@@ -245,42 +245,42 @@ def exercise12_1(str1):
 
 
 if __name__ == "__main__":
-    # print("EXERCISE SET 1")
-    # print("EX1")
-    # exercise1()
+    print("EXERCISE SET 1")
+    print("EX1")
+    exercise1()
 
-    # print("EX2")
-    # exercise2(3)
+    print("EX2")
+    exercise2(3)
 
-    # print("EX3")
-    # exercise3([1, 2, 3, 1])
+    print("EX3")
+    exercise3([1, 2, 3, 1])
 
-    # print("EX4")
-    # exercise4([5, 10, 2, 25])
+    print("EX4")
+    exercise4([5, 10, 2, 25])
 
-    # print("EX5")
-    # exercise5()
+    print("EX5")
+    exercise5()
 
-    # print("EX6")
-    # exercise6([5, 10, 2, 25])
+    print("EX6")
+    exercise6([5, 10, 2, 25])
 
-    # print("EX7")
-    # final_string = exercise7("Mimmo special", "Merge")
+    print("EX7")
+    exercise7("Mimmo special", "Merge")
 
-    # print("EX8")
-    # final_string = exercise8("hello", "world")
+    print("EX8")
+    exercise8("hello", "world")
 
-    # print("EX9")
-    # exercise9("HelloWorld123!@#")
+    print("EX9")
+    exercise9("HelloWorld123!@#")
 
-    # print("EX10")
-    # exercise10_1("usa is 3 times in usa")
-    #
-    # print("EX10")
-    # exercise10_2("usa is 3 times in usa")
+    print("EX10")
+    exercise10_1("usa is 3 times in usa")
 
-    # print("EX11")
-    # sum_of_the_digits = exercise11("33 trentini entrarono a trento tutti e 33 trotterellando")
+    print("EX10")
+    exercise10_2("usa is 3 times in usa")
+
+    print("EX11")
+    sum_of_the_digits = exercise11("33 trentini entrarono a trento tutti e 33 trotterellando")
 
     print("EX12")
     exercise12_1("33 trentini entrarono a trento tutti e 33 trotterellando")
