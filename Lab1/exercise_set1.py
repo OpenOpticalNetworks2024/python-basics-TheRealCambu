@@ -5,9 +5,6 @@ import matplotlib as plt
 import time
 
 
-# Please, remove all the pass in the exercises and substitute them with the expected methods for your functions
-
-
 # ex1
 def exercise1():
     print("Insert two integer numbers:\n")
