@@ -143,19 +143,20 @@ def exercise7(set1, set2):
     else:
         print("Neither set is a subset of the other.")
 
+
 # ex8
 def exercise8():
-    pass
+
 
 
 # ex9
 def exercise9():
-    pass
+
 
 
 # ex10
 def exercise10():
-    pass
+
 
 
 if __name__ == "__main__":
@@ -194,10 +195,14 @@ if __name__ == "__main__":
     # exercise7(firstSet, secondSet)
 
     print("EX8")
-    exercise8()
+    rollNumber = [47, 64, 69, 37, 76, 83, 95, 97]
+    sampleDict = {"Jhon": 47, "Emma": 69, "Kelly": 76, "Jason": 97}
+    exercise8(rollNumber, sampleDict)
 
     print("EX9")
-    exercise9()
+    speed = {'Jan': 47, 'Feb': 52, 'March': 47, 'April': 44, 'May': 52, 'June': 53, 'July': 54, 'Aug': 44, 'Sept': 54}
+    exercise9(speed)
 
     print("EX10")
-    exercise10()
+    sampleList = [87, 52, 44, 53, 54, 87, 52, 53]
+    exercise10(sampleList)
