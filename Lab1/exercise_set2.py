@@ -145,58 +145,88 @@ def exercise7(set1, set2):
 
 
 # ex8
-def exercise8():
+def exercise8(list1, dict1):
+    if not (isinstance(list1, list) and isinstance(dict1, dict)):
+        raise Exception("Either the first object is not a list or the second is not a dictionary!")
 
+    if not (len(list1) > 0 and len(dict1) > 0):
+        raise Exception("One or both sets are empty!")
+
+    dict_values = set(dict1.values())
+    # Create a new list excluding any elements from list1 that are not in dict_values
+    list_diff = list(set(list1) - dict_values)
+    # List of values in the list that are not present in the dictionary values
+    new_list = [elem for elem in list1 if elem not in dict_values]
+    print(f"Inserted dictionary: {dict1}\n"
+          f"Inserted list with roll numbers: {list1}\n"
+          f"The values in the list not present in the values of dictionary are: {list_diff}\n"
+          f"The new list with removed elements is: {new_list}")
 
 
 # ex9
-def exercise9():
+def exercise9(dict1):
+    if not isinstance(dict1, dict):
+        raise Exception("The input object is not a dictionary!")
 
+    if not len(dict1) > 0:
+        raise Exception("The input dictionary is empty!")
+
+    unique_dict_value = list(set(dict1.values()))
+    print(f"Unique dictionary values: {unique_dict_value}")
 
 
 # ex10
-def exercise10():
+def exercise10(list1):
+    if not isinstance(list1, list):
+        raise Exception("The input object is not a list!")
 
+    if not len(list1) > 0:
+        raise Exception("The input list is empty!")
+
+    new_obj = tuple(set(list1))
+
+    print(f"The minimum in the tuple with unique values is: {min(new_obj)}")
+    print(f"The maximum in the tuple with unique values is: {max(new_obj)}")
 
 
 if __name__ == "__main__":
-    # print("EXERCISE SET 2: Data Structures")
-    # print("EX1")
-    # listOne = [3, 6, 9, 12, 15, 18, 21, 8]
-    # listTwo = [4, 8, 12, 16, 20, 24, 28]
-    # merged_list = exercise1(listOne, listTwo)
-    # print(f"The new list is:\n{merged_list}")
+    print("EXERCISE SET 2: Data Structures")
+    print("EX1")
+    listOne = [3, 6, 9, 12, 15, 18, 21, 8]
+    listTwo = [4, 8, 12, 16, 20, 24, 28]
+    merged_list = exercise1(listOne, listTwo)
+    print(f"The new list is:\n{merged_list}")
 
-    # print("EX2")
-    # sampleList = [34, 54, 67, 89, 11, 43, 94]
-    # exercise2(sampleList)
+    print("EX2")
+    sampleList = [34, 54, 67, 89, 11, 43, 94]
+    exercise2(sampleList)
 
-    # print("EX3")
-    # sampleList = [11, 45, 8, 23, 14, 12, 78, 45, 89]
-    # exercise3(sampleList)
+    print("EX3")
+    sampleList = [11, 45, 8, 23, 14, 12, 78, 45, 89]
+    exercise3(sampleList)
 
-    # print("EX4")
-    # sampleList = [11, 45, 8, 11, 23, 45, 23, 45, 89]
-    # exercise4(sampleList)
+    print("EX4")
+    sampleList = [11, 45, 8, 11, 23, 45, 23, 45, 89]
+    exercise4(sampleList)
 
-    # print("EX5")
-    # firstList = [2, 3, 4, 5, 6, 7, 8]
-    # secondList = [4, 9, 16, 25, 36, 49, 64]
-    # exercise5(firstList, secondList)
+    print("EX5")
+    firstList = [2, 3, 4, 5, 6, 7, 8]
+    secondList = [4, 9, 16, 25, 36, 49, 64]
+    exercise5(firstList, secondList)
 
-    # print("EX6")
-    # firstSet = {23, 42, 65, 57, 78, 83, 29}
-    # secondSet = {57, 83, 29, 67, 73, 43, 48}
-    # exercise6(firstSet, secondSet)
+    print("EX6")
+    firstSet = {23, 42, 65, 57, 78, 83, 29}
+    secondSet = {57, 83, 29, 67, 73, 43, 48}
+    exercise6(firstSet, secondSet)
 
-    # print("EX7")
-    # firstSet = {57, 83, 29}
-    # secondSet = {57, 83, 29, 67, 73, 43, 48}
-    # exercise7(firstSet, secondSet)
+    print("EX7")
+    firstSet = {57, 83, 29}
+    secondSet = {57, 83, 29, 67, 73, 43, 48}
+    exercise7(firstSet, secondSet)
 
     print("EX8")
     rollNumber = [47, 64, 69, 37, 76, 83, 95, 97]
-    sampleDict = {"Jhon": 47, "Emma": 69, "Kelly": 76, "Jason": 97}
+    sampleDict = {"John": 47, "Emma": 69, "Kelly": 76, "Jason": 97}
     exercise8(rollNumber, sampleDict)
 
     print("EX9")
