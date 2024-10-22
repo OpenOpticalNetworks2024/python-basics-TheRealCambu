@@ -3,6 +3,7 @@
 import numpy as np
 import matplotlib as plt
 
+
 # ex1
 def exercise1():
     pass
@@ -57,17 +58,24 @@ if __name__ == "__main__":
     print("EXERCISE SET 3: NumPy Exercises")
     print("EX1")
     exercise1()
+
     print("EX2")
     exercise2()
+
     print("EX3")
     exercise3()
+
     print("EX4")
     exercise4()
+
     print("EX5")
     exercise5()
+
     print("EX6")
     exercise6()
+
     print("EX7")
     exercise7()
+
     print("EX8")
     exercise8()
