@@ -23,9 +23,21 @@ def exercise1(list1, list2):
 
 
 # ex2
-def exercise2():
-    pass
+def exercise2(list1):
+    if not isinstance(list1, list):
+        raise Exception("The input onject is not a list!")
 
+    if len(list1) < 2:
+        raise Exception("The list should contain at least two elements!")
+
+    second_elem = list1[3]
+    new_list = list1.copy()
+    new_list.remove(second_elem)
+    first_part, second_part = new_list[0], new_list[1:]
+    final_list = [first_part] + [second_elem] + second_part + [second_elem]
+
+    print(f"The final list is:\n{final_list}")
+    return final_list
 
 # ex3
 def exercise3():
@@ -68,15 +80,16 @@ def exercise10():
 
 
 if __name__ == "__main__":
-    print("EXERCISE SET 2: Data Structures")
-    print("EX1")
-    listOne = [3, 6, 9, 12, 15, 18, 21, 8]
-    listTwo = [4, 8, 12, 16, 20, 24, 28]
-    merged_list = exercise1(listOne, listTwo)
-    print(f"The new list is:\n{merged_list}")
+    # print("EXERCISE SET 2: Data Structures")
+    # print("EX1")
+    # listOne = [3, 6, 9, 12, 15, 18, 21, 8]
+    # listTwo = [4, 8, 12, 16, 20, 24, 28]
+    # merged_list = exercise1(listOne, listTwo)
+    # print(f"The new list is:\n{merged_list}")
 
     print("EX2")
-    exercise2()
+    sampleList = [34, 54, 67, 89, 11, 43, 94]
+    exercise2(sampleList)
 
     print("EX3")
     exercise3()
