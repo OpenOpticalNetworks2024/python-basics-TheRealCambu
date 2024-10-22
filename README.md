@@ -43,7 +43,7 @@ listTwo = [4, 8, 12, 16, 20, 24, 28]
 
 sampleList = [34, 54, 67, 89, 11, 43, 94]
 
-3. Given a list slice it into a 3 equal chunks and revert each list
+3. Given a list slice it into 3 equal chunks and revert each list
 
 sampleList = [11, 45, 8, 23, 14, 12, 78, 45, 89]
 
