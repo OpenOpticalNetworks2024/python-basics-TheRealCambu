@@ -3,9 +3,6 @@
 import numpy as np
 import matplotlib as plt
 
-# Please, remove all the pass in the exercises and substitute them with the expected methods for your functions
-
-
 # ex1
 def exercise1():
     pass
