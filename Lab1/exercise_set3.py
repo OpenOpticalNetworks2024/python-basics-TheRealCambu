@@ -24,18 +24,18 @@ def exercise2():
 
 
 # ex3
-def exercise3():
-    pass
+def exercise3(list_of_lists):
+    return list_of_lists[:, 2]
 
 
 # ex4
-def exercise4():
-    pass
+def exercise4(list_of_lists):
+    return list_of_lists[1::2, 0::2]
 
 
 # ex5
-def exercise5():
-    pass
+def exercise5(list_of_lists1, list_of_lists2):
+    return np.sqrt(list_of_lists1 + list_of_lists2)
 
 
 # ex6
@@ -68,17 +68,26 @@ if __name__ == "__main__":
     # print("EX1")
     # exercise1()
 
-    print("EX2")
-    exercise2()
+    # print("EX2")
+    # exercise2()
 
-    print("EX3")
-    exercise3()
+    # print("EX3")
+    # l_o_l = np.array([[11, 22, 33], [44, 55, 66], [77, 88, 99]])
+    # output = exercise3(l_o_l)
+    # print(output)
 
-    print("EX4")
-    exercise4()
+    # print("EX4")
+    # l_o_l = np.array([[3, 6, 9, 12], [15, 18, 21, 24], [27, 30, 33, 36], [39, 42, 45, 48], [51, 54, 57, 60]])
+    # output = exercise4(l_o_l)
+    # print(output)
 
-    print("EX5")
-    exercise5()
+    # print("EX5")
+    # l_o_l_1 = np.array([[5, 6, 9], [21, 18, 27]])
+    # l_o_l_2 = np.array([[15, 33, 24], [4, 7, 1]])
+    # output = exercise5(l_o_l_1, l_o_l_2)
+    # print("Array 1:\n", l_o_l_1)
+    # print("Array 2:\n", l_o_l_2)
+    # print("Sum of np arrays and then apply sqrt:\n", output)
 
     print("EX6")
     exercise6()
