@@ -68,39 +68,78 @@ def exercise4(df):
     plt.show()
 
 
-def exercise5():
-    pass
+def exercise5(df):
+    # Create a list of month names for labeling the x-axis
+    months_list = list(calendar.month_name)[1:]
+
+    # Create a figure and axis for the bar plot
+    fig, ax = plt.subplots(figsize=(12, 6))
+
+    # Plotting the bar chart
+    ax.bar(df["month_number"], df["bathingsoap"], color='skyblue', edgecolor='black')
+
+    # Setting the title and labels
+    fig.suptitle("Bar chart of the bathing soap sells", fontsize=20, fontweight='bold')
+    ax.set_ylabel("Item sold", fontsize=16)
+
+    # Customizing x-ticks
+    ax.set_xticks(df["month_number"])
+    ax.set_xticklabels(months_list, rotation=60, ha="right", fontsize=12)
+
+    # Adjust layout to make room for x-labelsù
+    fig.subplots_adjust(bottom=0.2)
+
+    # Display the plot
+    plt.grid(axis="y", linestyle="--", alpha=0.7)  # Adding a grid for better readability
+    plt.tight_layout()  # Automatically adjust subplot parameters for a better fit
+    plt.show()
 
 
-def exercise6():
-    pass
+def exercise6(df):
+    plt.plot(figsize=(12, 8))
+    plt.hist(df["total_profit"], color="skyblue", edgecolor="black", alpha=0.7)
+    plt.title("Histogram of the total profit for each month", fontsize=15, fontweight="bold")
+    plt.xlabel("Total Profit", fontsize=13)
+    plt.ylabel("Frequency", fontsize=13)
+    plt.grid(axis="y", linestyle="--", alpha=0.8)
+    plt.tight_layout()
+    plt.show()
 
 
-def exercise7():
-    pass
+def exercise7(df):
+    month_list = list(calendar.month_name)[1:]
+    fig, ax = plt.subplots(figsize=(12, 8))
+    fig.suptitle("Facewash sell every month", fontsize=20, fontweight="bold")
+    ax.plot(df["month_number"], df["facewash"])
+    ax.set_ylabel("Sells", fontsize=16)
+    ax.set_xticks(df["month_number"])
+    ax.set_xticklabels(month_list, rotation=60, ha="right", fontsize=12)
+    plt.grid(linestyle="-.", alpha=0.7)
+    plt.tight_layout()
+    plt.show()
 
 
 if __name__ == "__main__":
     dataframe_df = pd.read_csv("sales_data.csv")
 
-    # print("EXERCISE SET 1")
-    # print("EX1")
-    # exercise1(dataframe_df)
-    #
-    # print("EX2")
-    # exercise2(dataframe_df)
-    #
-    # print("EX3")
-    # exercise3(dataframe_df)
+    print("EXERCISE SET 1")
+    print("EX1")
+    exercise1(dataframe_df)
+
+    print("EX2")
+    exercise2(dataframe_df)
+
+    print("EX3")
+    exercise3(dataframe_df)
 
     print("EX4")
     exercise4(dataframe_df)
 
-    # print("EX5")
-    # exercise5()
-    #
-    # print("EX6")
-    # exercise6()
-    #
-    # print("EX7")
-    # exercise7()
+    print("EX5")
+    exercise5(dataframe_df)
+
+    print("EX6")
+    exercise6(dataframe_df)
+
+    print("EX7")
+    exercise7(dataframe_df)
