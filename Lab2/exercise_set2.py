@@ -78,30 +78,30 @@ if __name__ == "__main__":
         'Age': 6
     }
 
-    # print("EXERCISE SET 1")
-    # print("EX1")
-    # converted_py_obj = exercise1(json_obj)
-    # print(f"Original JSON:\n", {json_obj})
-    # print("Converted into Python dictionary:\n", converted_py_obj)
+    print("EXERCISE SET 1")
+    print("EX1")
+    converted_py_obj = exercise1(json_obj)
+    print(f"Original JSON:\n", {json_obj})
+    print("Converted into Python dictionary:\n", converted_py_obj)
 
-    # print("EX2")
-    # converted_json_obj = exercise2(python_obj)
-    # print("Original JSON data:\n", json_obj)
-    # print("Converted into Python dictionary:\n", converted_json_obj)
-    #
-    # print("EX3")
-    # JSON_strings = exercise3(python_obj)
-    # print(f"Original Python object:\n", {json_obj})
-    # print("Printing JSON strings...")
-    # for idx, string in enumerate(JSON_strings):
-    #     print(f"String {idx + 1}: {string}")
+    print("EX2")
+    converted_json_obj = exercise2(python_obj)
+    print("Original JSON data:\n", json_obj)
+    print("Converted into Python dictionary:\n", converted_json_obj)
 
-    # print("EX4")
-    # indent_level = 4
-    # indentation = " " * 4
-    # converted_json_obj = exercise4(python_obj, indentation)
-    # print(f"Original Python object:\n{python_obj}")
-    # print(f"Converted into JSON data with indent level {indent_level}:\n{converted_json_obj}")
+    print("EX3")
+    JSON_strings = exercise3(python_obj)
+    print(f"Original Python object:\n", {json_obj})
+    print("Printing JSON strings...")
+    for idx, string in enumerate(JSON_strings):
+        print(f"String {idx + 1}: {string}")
+
+    print("EX4")
+    indent_level = 4
+    indentation = " " * 4
+    converted_json_obj = exercise4(python_obj, indentation)
+    print(f"Original Python object:\n{python_obj}")
+    print(f"Converted into JSON data with indent level {indent_level}:\n{converted_json_obj}")
 
     print("EX5")
     with open("states.json") as file:
@@ -111,5 +111,4 @@ if __name__ == "__main__":
     new_json_data_area_code = exercise5(data_json, key_to_delete)
     with open(new_json_fpath, "w") as file:
         json.dump(new_json_data_area_code, file, indent=2)
-
-    print("'area_codes' field removed and save has been saved!")
+    print("'area_codes' field removed and the new JSON file has been saved!")
